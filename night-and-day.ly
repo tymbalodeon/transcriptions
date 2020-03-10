@@ -158,13 +158,11 @@ aFourth = \relative c'' {
       { g8 g~ g2 r4 }
     >>
   >> |
-  \ottava #-1
   <<
-    { r8 d' f d ef <f bf,> r4 }
+    { r8 \ottava #-1 d' f d ef <f bf,> \ottava #0 r4 }
     \\
     { r8 d, f d ef f r4 }
   >> |
-  \ottava #0
 
   \bar "|."
 }
