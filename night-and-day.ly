@@ -24,7 +24,7 @@ aFirst = \relative c'' {
   bf4  r4 r2 |
   g8 af bf cf df cf bf af |
   g4 af8 g bf4 r |
-  r1 |
+  R1 |
 
   \break
 
@@ -77,7 +77,7 @@ aSecond = \relative c' {
   bf4 r r2 |
   r4 r8 bf \repeat unfold 2 { \tuplet 3/2 { df16 d df } bf8 }
   \tuplet 3/2 { df16 d df } bf8 g ef d c r4 |
-  r1 |
+  R1 |
 
   \break
   
@@ -281,21 +281,68 @@ aFourth = \relative c'' {
   \bar "|."
 }
 
-\score {
-  \new Staff {
-    \clef treble
-    \key ef \major
-    \time 4/4
-
-    \mark "A1"
-    \aFirst
-    \mark "A2"
-    \aSecond
-    \mark "B"
-    \bridge
-    \mark "A3"
-    \aThird
-    \mark "A4"
-    \aFourth
+aChanges = \chords {
+  \repeat unfold 2 {
+    f1:m7.5- |
+    bf1:7 |
+    c1:maj7 |
+    s1 |
   }
+
+  a1:m7.5- |
+  af1:m7 |
+  g1:m7 |
+  gf1:dim7 |
+
+  f1:m7 |
+  bf1:7 |
+  c1:maj7 |
+  s1 |
+}
+
+bChanges = \chords {
+  \repeat unfold 2 {
+    ef1:maj7 |
+    s1 |
+    c1:maj7 |
+    s1 |
+  }
+
+  a1:m7.5- |
+  af1:m7 |
+  g1:m7 |
+  gf1:dim7 |
+
+  f1:m7 |
+  bf2:7 f2:m7 |
+  c1:maj7 |
+  s1 |
+}
+
+fullChanges = {
+  \repeat unfold 2 { \aChanges }
+  \bChanges
+  \repeat unfold 2 { \aChanges }
+}
+
+\score {
+  <<
+    \fullChanges
+    \new Staff {
+      \clef treble
+      \key ef \major
+      \time 4/4
+
+      \mark "A1"
+      \aFirst
+      \mark "A2"
+      \aSecond
+      \mark "B"
+      \bridge
+      \mark "A3"
+      \aThird
+      \mark "A4"
+      \aFourth
+    }
+  >>
 }
