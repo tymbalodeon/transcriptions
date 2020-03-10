@@ -40,12 +40,13 @@ aFirst = \relative c'' {
   r4 r8 af, d4 f8 cf' |
   bf af g bf f ef d bf
   c g r4 r r8 af |
+  
   \bar "||"
 }
 
 aSecond = \relative c' {
   \tuplet 3/2 { cf8 ef4 } g8 bf df e g bf |
-  df <e e,>~ <e e,> d df cf bf af |
+  df <e e,>4 d8 df cf bf af |
   g bf f ef \tuplet 3/2 { d16 ef d } c8 bf g |
   f ef d ef d c r4 |
 
@@ -63,6 +64,7 @@ aSecond = \relative c' {
   r4 r8 bf \repeat unfold 2 { \tuplet 3/2 { df16 d df } bf8 }
   \tuplet 3/2 { df16 d df } bf8 g ef d c r4 |
   r1 |
+  
   \bar "||"
 }
 
@@ -72,24 +74,24 @@ bridge = \relative c'' {
   \tuplet 3/2 { f c ef } \tuplet 3/2 { bf c g } \tuplet 3/2 { bf f g } \tuplet 3/2 { d f c } |
   \tuplet 3/2 { ef bf c } \tuplet 3/2 { g bf f } \tuplet 3/2 { g d f } c r |
 
-  r2 af''''16 ef gf df ef bf df af |
-  bf g r8 r af16 ef gf df d bf df af r8 |
+  r2 \ottava #1 af''''16 ef gf df ef bf df af |
+  bf g \ottava #0 r8 r af16 ef gf df d bf df af r8 |
   e''16 b d bf c g bf f g d f c ef bf c g |
-  bf f g d f c ef bf c g bf f g d f c |
+  \ottava #-1 bf f g d f c ef bf c g bf f g d f c \ottava #0 |
 
   r4 \tuplet 3/2 { r8 g'' c } \tuplet 3/2 { ef g c } ef f~ |
   f2 r8 ef \tuplet 3/2 { df16 ef df } cf8 |
   bf af g bf f ef d ef |
-  \new Voice {
-    <<
-      { f gf f ef d ef d c }
-      { d ef d c b c bf af }
-    >> }
+  <<
+    { f gf f ef d ef d c }
+    { d ef d c b c bf af }
+  >> |
 
   bf2 r8 \tuplet 3/2 { af16 bf af } g8 f |
   e f af c ef4 d8 f |
   bf,16 c bf af g8 bf f ef d bf |
   c4 r r2 |
+  
   \bar "||"
 }
 
@@ -113,6 +115,7 @@ aThird = \relative c'' {
   \tuplet 5/4 { af bf c ef g } f c ef cs \tuplet 5/4 { d f af cf af32 a } bf16 f af gs |
   \tuplet 5/4 { g bf d f d } ef bf r8 r2 |
   \acciaccatura { bf16 a af } g4 \acciaccatura { bf16 a af } f4 \acciaccatura { bf16 a af } ef8 g bf df~ |
+  
   \bar "||"
 }
 
@@ -121,6 +124,48 @@ aFourth = \relative c'' {
   \acciaccatura { fs,16 b } ef?4 \acciaccatura { f,16 bf } d4 \acciaccatura { e,16 a } df4 r |
   r8 bf16 g f8 ef d ef d c |
   bf g r4 r2 |
+
+  <<
+    <<
+      { \tuplet 3/2 { r4 df'' ef } \tuplet 3/2 { e e e } }
+      { \tuplet 3/2 { r4 af, bf } \tuplet 3/2 { b b b } }
+    >>
+    \\
+    <<
+      { \tuplet 3/2 { r4 ef, f } \tuplet 3/2 { gf gf gf } }
+      { \tuplet 3/2 { r4 bf, c } \tuplet 3/2 { df df df } }
+    >>
+  >> |
+  <<
+    <<
+      { \tuplet 3/2 { e' ef df } r4 df8 cf }
+      { \tuplet 3/2 { b4 bf af } r4 af8 gf }
+    >>
+    \\
+    <<
+      { \tuplet 3/2 { gf4 f ef } r4 ef8 df }
+      { \tuplet 3/2 { df4 c bf } r4 bf8 af }
+    >>
+  >> |
+  <<
+    <<
+      { bf' bf~ bf2 r4 }
+      { f8 f~ f2 r4 }
+    >>
+    \\
+    <<
+      { c8 c~ c2 r4 }
+      { g8 g~ g2 r4 }
+    >>
+  >> |
+  \ottava #-1
+  <<
+    { r8 d' f d ef <f bf,> r4 }
+    \\
+    { r8 d, f d ef f r4 }
+  >> |
+  \ottava #0
+
   \bar "|."
 }
 
