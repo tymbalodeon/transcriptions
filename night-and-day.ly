@@ -9,11 +9,6 @@
   right-margin = 0.75\in
   top-margin = 0.5\in
   bottom-margin = 0.5\in
-  % system-system-spacing =
-  %   #'((basic-distance . 16)
-  %     (minimum-distance . 12)
-  %     (padding . 1)
-  %     (stretchability . 60))
 }
 
 \header {
@@ -25,7 +20,7 @@
   arranger = "tr. by Ben Rosen"
 }
 
-aFirst = {
+aFirst = \relative c'' {
   bf4  r4 r2 |
   g8 af bf cf df cf bf af |
   g4 af8 g bf4 r |
@@ -48,7 +43,7 @@ aFirst = {
   \bar "||"
 }
 
-aSecond = {
+aSecond = \relative c' {
   \tuplet 3/2 { cf8 ef4 } g8 bf df e g bf |
   df <e e,>~ <e e,> d df cf bf af |
   g bf f ef \tuplet 3/2 { d16 ef d } c8 bf g |
@@ -98,12 +93,35 @@ bridge = \relative c'' {
   \bar "||"
 }
 
-% aThird= {}
+aThird = \relative c'' {
+  r8 bf~ bf4 bf4. bf8 |
+  r2 r4 r8 bf |
+  d bf bf g g d d bf |
+  c4 r r2 |
 
-% aFourth = {}
+  \tuplet 3/2 { r4 g' c } \tuplet 3/2 { d ef d8 c } |
+  b b r4 r2 |
+  r8 a16 bf \tuplet 3/2 { g8. bf16 g f } ef8 d f ef |
+  d c r4 r8 d16 c b c \tuplet 3/2 { d ef f } |
+
+  c4 r r bf16 g a g |
+  \tuplet 5/4 { af bf c ef g } f c ef cs \tuplet 5/4 { d f af cf af32 a } bf16 f af gs |
+  \tuplet 5/4 { g bf d f d } ef bf r8 r2 |
+  \acciaccatura { bf16 a af } g4 \acciaccatura { bf16 a af } f4 \acciaccatura { bf16 a af } ef8 g bf df~ |
+
+  df \acciaccatura { ef,16 af } df8 d4 \acciaccatura { e,16 a } ef'4 \acciaccatura { f,16 bf } e4 |
+  \acciaccatura { fs,16 b } ef?4 \acciaccatura { f,16 bf } d4 \acciaccatura { e,16 a } df4 r |
+  r8 bf16 g f8 ef d ef d c |
+  bf g r4 r2 |
+  \bar "||"
+}
+
+aFourth = {
+  \bar "|."
+}
 
 \score {
-  \new Staff \relative c'' {
+  \new Staff {
     \clef treble
     \key ef \major
     \time 4/4
@@ -114,9 +132,9 @@ bridge = \relative c'' {
     \aSecond
     \mark "B"
     \bridge
-    % \mark \default
-    % \aThird
-    % \mark \default
-    % \aFourth
+    \mark "A3"
+    \aThird
+    \mark "A4"
+    \aFourth
   }
 }
