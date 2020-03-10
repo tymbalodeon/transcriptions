@@ -1,6 +1,5 @@
 \version "2.20.0"
 % \version "2.19.83"
-% \version "2.18.2"
 \language "english"
 \pointAndClickOff
 \paper {
@@ -25,9 +24,6 @@
   composer = "Cole Porter"
   arranger = "tr. by Ben Rosen"
 }
-
-timeSig = \time 4/4
-keySig = \key ef \major
 
 aFirst = {
   bf4  r4 r2 |
@@ -63,8 +59,8 @@ aSecond = {
   ef cs d c \tuplet 3/2 { bf16 c bf } g8 \tuplet 3/2 { f16 g f } ef8
   d c bf g f ef d ef
 
-  g c ef4 f f |
-  f8 ef \tuplet 3/2 { f ef cf } bf af g gf |
+  g c ef4 \acciaccatura e8 f4 \acciaccatura e8 f4 |
+  \acciaccatura e8 f ef \tuplet 3/2 { f ef cf } bf af g gf |
   f ef d bf c4 g |
   r \tuplet 3/2 { r8 d''4 } f8 ef \tuplet 3/2 { d16 ef d } c8 |
 
@@ -84,8 +80,8 @@ aSecond = {
 \score {
   \new Staff \relative c'' {
     \clef treble
-    \keySig
-    \timeSig
+    \key ef \major
+    \time 4/4
 
     \mark "A1"
     \aFirst
