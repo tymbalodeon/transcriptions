@@ -71,7 +71,32 @@ aSecond = {
   \bar "||"
 }
 
-% b = {}
+bridge = \relative c'' {
+  r8 bf df f af gf bf g |
+  f ef r4 r r8 d |
+  \tuplet 3/2 { f c ef } \tuplet 3/2 { bf c g } \tuplet 3/2 { bf f g } \tuplet 3/2 { d f c } |
+  \tuplet 3/2 { ef bf c } \tuplet 3/2 { g bf f } \tuplet 3/2 { g d f } c r |
+
+  r2 af''''16 ef gf df ef bf df af |
+  bf g r8 r af16 ef gf df d bf df af r8 |
+  e''16 b d bf c g bf f g d f c ef bf c g |
+  bf f g d f c ef bf c g bf f g d f c |
+
+  r4 \tuplet 3/2 { r8 g'' c } \tuplet 3/2 { ef g c } ef f~ |
+  f2 r8 ef \tuplet 3/2 { df16 ef df } cf8 |
+  bf af g bf f ef d ef |
+  \new Voice {
+    <<
+      { f gf f ef d ef d c }
+      { d ef d c b c bf af }
+    >> }
+
+  bf2 r8 \tuplet 3/2 { af16 bf af } g8 f |
+  e f af c ef4 d8 f |
+  bf,16 c bf af g8 bf f ef d bf |
+  c4 r r2 |
+  \bar "||"
+}
 
 % aThird= {}
 
@@ -87,8 +112,8 @@ aSecond = {
     \aFirst
     \mark "A2"
     \aSecond
-    % \mark \default
-    % \b
+    \mark "B"
+    \bridge
     % \mark \default
     % \aThird
     % \mark \default
