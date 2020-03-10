@@ -94,6 +94,11 @@ bridge = \relative c'' {
 }
 
 aThird = \relative c'' {
+  r4 r8 bf~ bf af df cf |
+  e d g f bf af g f |
+  \acciaccatura fs16 g4. \acciaccatura { gs16 a as } bf8 f ef d bf |
+  c4 r r2 |
+  
   r8 bf~ bf4 bf4. bf8 |
   r2 r4 r8 bf |
   d bf bf g g d d bf |
@@ -108,15 +113,14 @@ aThird = \relative c'' {
   \tuplet 5/4 { af bf c ef g } f c ef cs \tuplet 5/4 { d f af cf af32 a } bf16 f af gs |
   \tuplet 5/4 { g bf d f d } ef bf r8 r2 |
   \acciaccatura { bf16 a af } g4 \acciaccatura { bf16 a af } f4 \acciaccatura { bf16 a af } ef8 g bf df~ |
+  \bar "||"
+}
 
+aFourth = \relative c'' {
   df \acciaccatura { ef,16 af } df8 d4 \acciaccatura { e,16 a } ef'4 \acciaccatura { f,16 bf } e4 |
   \acciaccatura { fs,16 b } ef?4 \acciaccatura { f,16 bf } d4 \acciaccatura { e,16 a } df4 r |
   r8 bf16 g f8 ef d ef d c |
   bf g r4 r2 |
-  \bar "||"
-}
-
-aFourth = {
   \bar "|."
 }
 
