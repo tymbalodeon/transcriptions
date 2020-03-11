@@ -347,15 +347,15 @@ changes = \chords {
       \key ef \major
       \time 4/4
 
-      \mark "A1"
+      \mark \markup { \box \bold "A1" }
       \aFirst
-      \mark "A2"
+      \mark \markup { \box \bold "A2" }
       \aSecond
-      \mark "B"
+      \mark \markup { \box \bold "B" }
       \bridge
-      \mark "A3"
+      \mark \markup { \box \bold "A3" }
       \aThird
-      \mark "A4"
+      \mark \markup { \box \bold "A4" }
       \aFourth
     }
   >>
