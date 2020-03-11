@@ -17,7 +17,6 @@
   subtitle = "Piano Solo by Bill Evans"
   subsubtitle = "from the Album \"Everybody Digs Bill Evans\""
   composer = "Cole Porter"
-  arranger = "tr. by Ben Rosen"
 }
 
 aFirst = \relative c'' {
