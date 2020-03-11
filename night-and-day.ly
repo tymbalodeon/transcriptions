@@ -281,26 +281,27 @@ aFourth = \relative c'' {
   \bar "|."
 }
 
-aChanges = \chords {
+changes = \chords {
   \repeat unfold 2 {
-    f1:m7.5- |
+    \repeat unfold 2 {
+      f1:m7.5- |
+      bf1:7 |
+      ef1:maj7 |
+      s1 |
+    }
+
+    a1:m7.5- |
+    af1:m7 |
+    g1:m7 |
+    gf1:dim7 |
+
+    f1:m7 |
     bf1:7 |
     ef1:maj7 |
     s1 |
+
   }
 
-  a1:m7.5- |
-  af1:m7 |
-  g1:m7 |
-  gf1:dim7 |
-
-  f1:m7 |
-  bf1:7 |
-  ef1:maj7 |
-  s1 |
-}
-
-bChanges = \chords {
   \repeat unfold 2 {
     gf1:maj7 |
     s1 |
@@ -317,17 +318,30 @@ bChanges = \chords {
   bf2:7 f2:m7 |
   ef1:maj7 |
   s1 |
-}
 
-fullChanges = {
-  \repeat unfold 2 { \aChanges }
-  \bChanges
-  \repeat unfold 2 { \aChanges }
+ \repeat unfold 2 {
+  \repeat unfold 2 {
+    f1:m7.5- |
+    bf1:7 |
+    ef1:maj7 |
+    s1 |
+  }
+
+  a1:m7.5- |
+  af1:m7 |
+  g1:m7 |
+  gf1:dim7 |
+
+  f1:m7 |
+  bf1:7 |
+  ef1:maj7 |
+  s1 |
+ }
 }
 
 \score {
   <<
-    \fullChanges
+    \changes
     \new Staff {
       \clef treble
       \key ef \major
