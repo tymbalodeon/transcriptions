@@ -285,7 +285,7 @@ aChanges = \chords {
   \repeat unfold 2 {
     f1:m7.5- |
     bf1:7 |
-    c1:maj7 |
+    ef1:maj7 |
     s1 |
   }
 
@@ -296,15 +296,15 @@ aChanges = \chords {
 
   f1:m7 |
   bf1:7 |
-  c1:maj7 |
+  ef1:maj7 |
   s1 |
 }
 
 bChanges = \chords {
   \repeat unfold 2 {
-    ef1:maj7 |
+    gf1:maj7 |
     s1 |
-    c1:maj7 |
+    ef1:maj7 |
     s1 |
   }
 
@@ -315,7 +315,7 @@ bChanges = \chords {
 
   f1:m7 |
   bf2:7 f2:m7 |
-  c1:maj7 |
+  ef1:maj7 |
   s1 |
 }
 
