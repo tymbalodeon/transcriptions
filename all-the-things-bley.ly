@@ -18,7 +18,7 @@
   composer = "Jerome Kern"
 }
 
-aFirst = \relative c' {
+aOne = \relative c' {
   R1 |
   r4 e r2 |
   e4 r e r |
@@ -48,7 +48,7 @@ aFirst = \relative c' {
   \bar "||"
 }
 
-bridge = \relative c' {
+bridgeOne = \relative c' {
   
   r g'8 d'~ d4 g,8 d'~ |
   d ef, \tuplet 3/2 { f bf d } bf4 d |
@@ -65,7 +65,7 @@ bridge = \relative c' {
   \bar "||"
 }
 
-aSecond = \relative c' {
+cOne = \relative c' {
   d4 \tuplet 3/2 { r8 f fs } \tuplet 3/2 { g gs a } \tuplet 3/2 { bf g4 } |
   r4 r8 df <g af> af16 g f8 c'~ |
   c4 ef, ef c'8 d,~ |
@@ -84,7 +84,7 @@ aSecond = \relative c' {
   \bar "||"
 }
 
-aThird = \relative c' {
+aTwo = \relative c' {
   c8 c'4 bf8 af4 r8 fs~ |
   fs4 fs8 e fs4 e |
   cs8 d cs d~ d4 cs |
@@ -104,73 +104,91 @@ aThird = \relative c' {
   r \tuplet 3/2 { r8 df ef } f16 gf a c d8 ef |
   \tuplet 3/2 { b cs e } \tuplet 3/2 { b cs a } \tuplet 3/2 { gs fs e } b'16 fs gs e |
   \tuplet 3/2 { ef8 d c } \tuplet 3/2 { cs ds fs16 cs } \tuplet 3/2 { ds8 b bf16 gs } a8 g' |
-  
+
+  \bar "||"
+}
+
+bridgeTwo = \relative c' {
   \tuplet 3/2 { e c a } \tuplet 3/2 { d ef \tuplet 3/2 { f16 gf af } } \tuplet 3/2 { a8 c ef } r4 |
   R1 |
   r2 r8 bf~ bf fs' |
-  a,4
+  a,4 e'8 af,~ af ef' gf,4 |
+
+  df'8 af~ af ef' a,4 e'8 b~ |
+  b fs' a,4 e'8 af,~ af df |
+  gf,4 df'8 af~ af ef' e,4 |
+  c'8 d,~ d c' c,4 \tuplet 3/2 { c'4 bf16 g } |
+}
+
+cTwo = \relative c'' {
+  af2 f8 c r4 |
+  af'8 af <c, c'>4 <c c'> af' |
   
 }
 
 changes = \chords {
-  f1:m7 |
-  bf:m7 |
-  ef:7 |
-  af:maj7 |
+  \repeat unfold 2 {
+    f1:m7 |
+    bf:m7 |
+    ef:7 |
+    af:maj7 |
 
-  df:maj7 |
-  g:7 |
-  c:maj7 |
-  s |
+    df:maj7 |
+    g:7 |
+    c:maj7 |
+    s |
 
-  c:m7 |
-  f:m7 |
-  bf:7 |
-  ef:maj7 |
+    c:m7 |
+    f:m7 |
+    bf:7 |
+    ef:maj7 |
 
-  af:maj7 |
-  a2:m7 d:7 |
-  g1:maj7 |
-  s |
+    af:maj7 |
+    a2:m7 d:7 |
+    g1:maj7 |
+    s |
 
-  a:m7 |
-  d:7 |
-  g:maj7 |
-  s |
+    a:m7 |
+    d:7 |
+    g:maj7 |
+    s |
 
-  fs:m7.5- |
-  b:7 |
-  e:maj7 |
-  c:7.5+ |
+    fs:m7.5- |
+    b:7 |
+    e:maj7 |
+    c:7.5+ |
 
-  f1:m7 |
-  bf:m7 |
-  ef:7 |
-  af:maj7 |
+    f1:m7 |
+    bf:m7 |
+    ef:7 |
+    af:maj7 |
 
-  df:maj7 |
-  df:m7 |
-  c:m7 |
-  b:dim7 |
+    df:maj7 |
+    df:m7 |
+    c:m7 |
+    b:dim7 |
 
-  bf:m7 |
-  ef:7 |
-  af:maj7 |
-  c:7.5+ |
+    bf:m7 |
+    ef:7 |
+    af:maj7 |
+    c:7.5+ |
+  }
 }
 
 \score {
   <<
-    \repeat unfold 2 { \changes }
+    \changes
     \new Staff {
       \clef treble
       \key af \major
       \time 4/4
 
-      \aFirst
-      \bridge
-      \aSecond
-      \aThird
+      \aOne
+      \bridgeOne
+      \cOne
+      \aTwo
+      \bridgeTwo
+      \cTwo
     }
   >>
 }
