@@ -33,7 +33,7 @@ aFirst = \relative c' {
 
   \break
 
-  r \tuplet 3/2 { r8 c g' } c g ef c |
+  r r8 c16 g' c8 g ef c |
   bf'4 af8 bf16 af g8 f ef c |
   df ef f af c af bf cf |
   g e d c b gs a4 |
@@ -65,12 +65,35 @@ bridge = \relative c' {
   \bar "||"
 }
 
-aSecond = \relative c'' {
+aSecond = \relative c' {
+  d4 \tuplet 3/2 { r8 f fs } \tuplet 3/2 { g gs a } \tuplet 3/2 { bf g4 } |
+  r4 r8 df <g af> af16 g f8 c'~ |
+  c4 ef, ef c'8 d,~ |
+  d2. c'8 df,~ |
 
+  df4 c'8 df, d4 c'8 ef,~ |
+  ef c' ef, e g af c fs,~ |
+  fs4 c'8 fs, g4 c8 g~ |
+  g af c af a4 d8 bf |
+  
+  b4 d8 b cs4 e8 cs~ |
+  cs d f d ef e g e~ |
+  e gf df ef e df ef df |
+  c bf af g e c r4 |
+
+  \bar "||"
 }
 
-aThird = \relative c'' {
+aThird = \relative c' {
+  c8 c'4 bf8 af4 r8 fs~ |
+  fs4 fs8 e fs4 e |
+  cs8 d cs d~ d4 cs |
+  a' a8 gs a4 g8 fs~ |
   
+  fs fs4 e8 fs4 e |
+  cs' d d cs8 b~ |
+  b cs16 b a8 gs~ gs gs16 fs e8 d |
+  cs fs r4 cs r8 cs |
 }
 
 changes = \chords {
@@ -122,7 +145,7 @@ changes = \chords {
 
 \score {
   <<
-    \changes
+    \repeat unfold 2 { \changes }
     \new Staff {
       \clef treble
       \key af \major
@@ -130,6 +153,8 @@ changes = \chords {
 
       \aFirst
       \bridge
+      \aSecond
+      \aThird
     }
   >>
 }
