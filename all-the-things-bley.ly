@@ -94,6 +94,22 @@ aThird = \relative c' {
   cs' d d cs8 b~ |
   b cs16 b a8 gs~ gs gs16 fs e8 d |
   cs fs r4 cs r8 cs |
+
+  g' ef'4. d8 c g c, |
+  r f bf b d g e cs |
+  r a af gf f ef r bf' |
+  d4 \tuplet 3/2 { bf8 g d } c' bf g f |
+
+  ef f16 ef df4 ef c |
+  r \tuplet 3/2 { r8 df ef } f16 gf a c d8 ef |
+  \tuplet 3/2 { b cs e } \tuplet 3/2 { b cs a } \tuplet 3/2 { gs fs e } b'16 fs gs e |
+  \tuplet 3/2 { ef8 d c } \tuplet 3/2 { cs ds fs16 cs } \tuplet 3/2 { ds8 b bf16 gs } a8 g' |
+  
+  \tuplet 3/2 { e c a } \tuplet 3/2 { d ef \tuplet 3/2 { f16 gf af } } \tuplet 3/2 { a8 c ef } r4 |
+  R1 |
+  r2 r8 bf~ bf fs' |
+  a,4
+  
 }
 
 changes = \chords {
