@@ -20,8 +20,8 @@
 
 aOne = \relative c' {
   R1 |
-  r4 e r2 |
-  e4 r e r |
+  r4 \acciaccatura { g'16 gf f } e4 r2 |
+  \acciaccatura { g16 gf f } e4 r \acciaccatura { g16 gf f } e4 r |
   e8 e \tuplet 3/2 { ef df af } e' e16 ef df4 |
   
   af4 r8 af' bf df~ \tuplet 3/2 { df bf af } |
@@ -34,8 +34,8 @@ aOne = \relative c' {
   df ef f af c af bf cf |
   g e d c b gs a4 |
   
-  r \tuplet 3/2 { r8 c e } g4 fs8 a |
-  e'4 \tuplet 3/2 { ds8 b a } cs4 b8 a |
+  r r16 c e8 g4 fs8 a |
+  \acciaccatura ds16 e4 \tuplet 3/2 { ds8 b a } cs4 b8 a |
   gs4 fs8 es ds4 cs8 ds |
   es cs ds4 cs as |
 
