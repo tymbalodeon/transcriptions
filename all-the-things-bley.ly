@@ -26,8 +26,12 @@ aOne = \relative c' {
   
   af4 r8 af' bf df~ \tuplet 3/2 { df bf af } |
   \tuplet 3/2 { df bf af } ff ef~ ef df r4 |
-  a4 \tuplet 3/2 { r8 c d } \tuplet 3/2 { e fs gs } \tuplet 3/2 { a cs ds } |
-  \tuplet 3/2 { e cs ds } \tuplet 3/2 { b as gs } \tuplet 3/2 { e ds cs } r4 |
+  a4 \tuplet 3/2 { r8 c d }
+
+  % \tuplet 3/2 { e fs gs } \tuplet 3/2 { a cs ds } |
+  e16 fs8 gs16 a8 cs16 ds
+
+  \tuplet 3/2 { e8 cs ds } \tuplet 3/2 { b as gs } \tuplet 3/2 { e ds cs } r4 |
 
   r r8 c16 g' c8 g ef c |
   bf'4 af8 bf16 af g8 f ef c |
@@ -49,10 +53,10 @@ bridgeOne = \relative c' {
   r ef,8 c'~ c df, ef c'~ |
   c df, \tuplet 3/2 { ef af c } df4 c8 bf~ |
 
-  bf4 g8 e ef4 r |
+  bf4 g8 e ds4 r |
   r8 e \tuplet 3/2 { g bf c } \tuplet 3/2 { ds e g } \tuplet 3/2 { ds e b } |
   \tuplet 3/2 { bf! a g } \tuplet 3/2 { d' as b } \tuplet 3/2 { g e d } \tuplet 3/2 { g ds e } |
-  \tuplet 3/2 { cf bf af } \tuplet 3/2 { g f' as, } \tuplet 3/2 { b g b } \tuplet 3/2 { d ef af, } |
+  \tuplet 3/2 { b bf af } \tuplet 3/2 { g f' as, } \tuplet 3/2 { b g b } \tuplet 3/2 { d ef af, } |
 
   \bar "||"
 }
@@ -93,9 +97,9 @@ aTwo = \relative c' {
   d4 \tuplet 3/2 { bf8 g d } c' bf g f |
 
   ef f16 ef df4 ef8 c r4 |
-  r \tuplet 3/2 { r8 df ef } f16 gf a c d8 ef |
-  \tuplet 3/2 { b cs e } \tuplet 3/2 { b cs a } \tuplet 3/2 { gs fs e } b'16 fs gs e |
-  \tuplet 3/2 { ds8 d c } \tuplet 3/2 { cs ds fs16 cs } \tuplet 3/2 { ds8 b bf16 gs } a8 g' |
+  r \tuplet 3/2 { r8 df ef } f16 gf a c \tuplet 3/2 { d8 ef4 } |
+  \tuplet 3/2 { b8 cs e } \tuplet 3/2 { b cs a } \tuplet 3/2 { gs fs e } b'16 fs gs e |
+  \tuplet 3/2 { ef!8 d c } \tuplet 3/2 { cs ds fs16 cs } \tuplet 3/2 { ds8 b bf16 gs } a8 g' |
 
   \bar "||"
 }
@@ -127,7 +131,7 @@ cTwo = \relative c'' {
 
   r2 df4 af'8 <c, c'>~ |
   <c c'> <c c'>4 af'16 f af8 af f af~ |
-  af c, af' bf16 af g8 af4 g8 |
+  af c, af' af g af4 g8 |
   af c, r4 <bf bf'> g'8 af |
 
   \bar "||"
@@ -159,9 +163,9 @@ aThree = \relative c'' {
 
 bridgeThree = \relative c' {
   c' fs, ef bf' f d r4 |
-  r8 f \tuplet 3/2 { bf c df16 d } \tuplet 3/2 { ef8 f fs } \tuplet 3/2 { gs a4 } |
-  r r8 af,~ \tuplet 3/2 { af f' df } \tuplet 3/2 { af ef' df } |
-  \tuplet 3/2 { ef cf r } \tuplet 3/2 { r ef, bf' } \tuplet 3/2 { f g ef } \tuplet 3/2 { b' cs e }
+  r8 f \tuplet 3/2 { bf c cs16 d } \tuplet 3/2 { ef8 f fs } \tuplet 3/2 { gs a4 } |
+  r r8 af,!~ \tuplet 3/2 { af f' df } \tuplet 3/2 { af ef' df } |
+  \tuplet 3/2 { ef cf r } \tuplet 3/2 { r e, b' } \tuplet 3/2 { fs gs e } \tuplet 3/2 { b' cs e }
 
   \tuplet 3/2 { b ds a } gs16 fs e b' \tuplet 3/2 { fs8 gs e } \tuplet 3/2 { ds cs b }
   \tuplet 3/2 { fs' cs ds } \tuplet 3/2 { b gs fs } \tuplet 3/2 { e b' fs } gs4 |
@@ -173,9 +177,9 @@ bridgeThree = \relative c' {
 
 cThree = \relative c'' {
   af2. g8 af |
-  d,2 c'8 d,4 cf'8~ |
-  cf e, b4 r r8 bf' |
-  d,4 fs8 gs a fs f4 |
+  d,2 c'8 d,4 b'8~ |
+  b e, b4 r r8 bf' |
+  d,4 fs8 gs a gf f4 |
 
   r8 df'4. df,8 ff af4 |
   cf8 af bf4 af bf |
