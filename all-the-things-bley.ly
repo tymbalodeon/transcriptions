@@ -38,7 +38,7 @@ aOne = \relative c' {
   df ef f af c af bf cf |
   g e d c b gs a4 |
   
-  r r16 c e8 g4 fs8 a |
+  r r8 c16 e g4 fs8 a |
   \acciaccatura ds16 e4 \tuplet 3/2 { ds8 b a } cs4 b8 a |
   af!4 gf8 f ef4 df8 ef |
   f df ef4 df bf |
@@ -130,7 +130,7 @@ cTwo = \relative c'' {
   g4 g e cs |
 
   r2 df4 af'8 <c, c'>~ |
-  <c c'> <c c'>4 af'16 f af8 af f af~ |
+  <c c'> <c c'>4 af'16 f af8 af f af |
   af c, af' af g af4 g8 |
   af c, r4 <bf bf'> g'8 af |
 
@@ -188,8 +188,8 @@ cThree = \relative c'' {
 
   R1 |
   r4 <af, af'> <af af'> r |
-  r <af af'> f' <af, af'> |
-  <af af'> f' <af, af'> <af af'>~ |
+  r <af af'> f'8 ef <af, af'>4 |
+  <af af'> f'8 ef <af, af'>4 <af af'>~ |
   <af af'>1 |
   
   \bar "|."
