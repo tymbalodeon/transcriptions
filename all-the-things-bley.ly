@@ -268,12 +268,15 @@ changes = \chords {
       \key af \major
       \time 4/4
 
+      \mark \markup { \box \bold "1" }
       \aOne
       \bridgeOne
       \cOne
+      \mark \markup { \box \bold "2" }
       \aTwo
       \bridgeTwo
       \cTwo
+      \mark \markup { \box \bold "3" }
       \aThree
       \bridgeThree
       \cThree
