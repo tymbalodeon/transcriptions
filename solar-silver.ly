@@ -41,7 +41,7 @@ chorusOne = \relative c' {
   \mark \markup { \box \bold "2" }
   
   r r8 b d4 g, |
-  b ef, g c,8 ef |
+  b ef, g b,8 ef |
   g,4 b ef, r |
   r2 \tuplet 3/2 { df''8 ef df } c bf |
 
