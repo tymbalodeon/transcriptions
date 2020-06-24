@@ -46,7 +46,7 @@ chorusOne = \relative c' {
   r2 \tuplet 3/2 { df''8 ef df } c bf |
 
   \tuplet 3/2 { a bf b } \tuplet 3/2 { c b bf } a f d c |
-  g' ef f g af bf d df |
+  g' e f g gs a d df |
   c4 bf8 af r c, ef g |
   gf4 r f8 d b af |
 
