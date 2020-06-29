@@ -18,6 +18,24 @@
   composer = "Jerome Kern"
 }
 
+#(define ((bars-per-line-engraver bar-list) context)
+  (let* ((working-copy bar-list)
+         (total (1+ (car working-copy))))
+    `((acknowledgers
+       (paper-column-interface
+        . ,(lambda (engraver grob source-engraver)
+             (let ((internal-bar (ly:context-property context 'internalBarNumber)))
+               (if (and (pair? working-copy)
+                        (= (remainder internal-bar total) 0)
+                        (eq? #t (ly:grob-property grob 'non-musical)))
+                   (begin
+                     (set! (ly:grob-property grob 'line-break-permission) 'force)
+                     (if (null? (cdr working-copy))
+                         (set! working-copy bar-list)
+                         (begin
+                           (set! working-copy (cdr working-copy))))
+                           (set! total (+ total (car working-copy))))))))))))
+
 aOne = \relative c' {
   R1 |
   r4 \acciaccatura { g'16 gf f } e4 r2 |
@@ -202,56 +220,40 @@ changes = \chords {
     ef:7 |
     af:maj7 |
 
-    \break
-
     df:maj7 |
     g:7 |
     c:maj7 |
     s |
-
-    \break
 
     c:m7 |
     f:m7 |
     bf:7 |
     ef:maj7 |
 
-    \break
-
     af:maj7 |
     a2:m7 d:7 |
     g1:maj7 |
     s |
-
-    \break
 
     a:m7 |
     d:7 |
     g:maj7 |
     s |
 
-    \break
-
     fs:m7.5- |
     b:7 |
     e:maj7 |
     c:7.5+ |
-
-    \break
 
     f1:m7 |
     bf:m7 |
     ef:7 |
     af:maj7 |
 
-    \break
-
     df:maj7 |
     df:m7 |
     c:m7 |
     b:dim7 |
-
-    \break
 
     bf:m7 |
     ef:7 |
@@ -282,4 +284,11 @@ changes = \chords {
       \cThree
     }
   >>
+  \layout {
+    \context {
+      \Score
+      %\override NonMusicalPaperColumn.line-break-permission = ##f
+      \consists #(bars-per-line-engraver '(4))
+    }
+  }
 }
